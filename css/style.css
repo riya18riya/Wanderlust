@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background: #F8F9FA;
+    color: #404850;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* HEADER */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 81px;
+    background: #FFFFFFE5;
+    border-bottom: 1px solid #BFC7D14D;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    backdrop-filter: blur(12px);
+}
+
+.header-container {
+    max-width: 1536px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: #023E8A;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 39.2px;
+    letter-spacing: -0.7px;
+}
+
+.nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #BFC7D14D;
+    box-shadow: 0px 4px 8px 0px #0000000D;
+}
+
+.header.menu-open .nav {
+    display: flex;
+}
+
+.nav-link {
+    color: #404850;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link.active {
+    color: #0077B6;
+    border-bottom-color: #0077B6;
+}
+
+.nav-cta {
+    align-self: flex-start;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    background: #0077B6;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle img {
+    width: 22.5px;
+    height: 15px;
+}
+
+/*HERO SECTION*/
+.hero {
+    width: 100%;
+}
+
+.hero-background {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 50%, #F8F9FA 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 896px;
+    padding: 0 16px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+}
+
+.hero-heading h1 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.hero-description {
+    max-width: 358px;
+}
+
+.hero-description p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28.8px;
+    text-align: center;
+    color: #FFFFFFE5;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 60px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    background: #0077B6;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.9px;
+}
+
+.hero-arrow {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.destinations {
+    width: 100%;
+    padding: 96px 16px;
+    background: #F8F9FA;
+}
+
+.destinations-inner {
+    max-width: 1536px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+.destinations-container {
+    width: 100%;
+    max-width: 358px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.destinations-container h2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #023E8A;
+}
+
+.destinations-container p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #404850;
+}
+
+.destination-grid {
+    width: 100%;
+    max-width: 358px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.destination-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    border: 1px solid #E7E8E9;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    overflow: hidden;
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 267px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.price-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    background: #E9C46A;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.7px;
+    white-space: nowrap;
+}
+
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+}
+
+.card-content h3 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 39.2px;
+    color: #0077B6;
+}
+
+.card-content p {
+    flex: 1;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #404850;
+}
+
+.learn-more {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    background: #E9C46A;
+    color: #773E00;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.7px;
+    text-align: center;
+}
+
+.about-us {
+    width: 100%;
+    padding: 96px 16px;
+    background: #F3F4F5;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 896px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.about-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-heading h2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #023E8A;
+}
+
+.about-card {
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #EDEEEF;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+}
+
+.about-content p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29.25px;
+    text-align: center;
+    color: #404850;
+}
+
+/*FOOTER*/
+.footer {
+    width: 100%;
+    padding: 48px 16px;
+    background: #FFFFFF;
+    border-top: 1px solid #EDEEEF;
+}
+
+.footer-container {
+    max-width: 1536px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 39.2px;
+    color: #023E8A;
+    text-decoration: none;
+}
+
+.footer-nav {
+    width: 100%;
+    max-width: 358px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.footer-nav a {
+    color: #64748B;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.footer-bottom {
+    width: 100%;
+    max-width: 358px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-bottom p {
+    padding-right: 34px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #404850;
+}
+
+.back-to-top {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    color: #005D90;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.7px;
+}
+
+.back-to-top img {
+    width: 9.33px;
+    height: 9.33px;
+}
+
+
+/* ========== TABLET (768px+) ========== */
+@media (min-width: 768px) {
+
+    /* Header: hamburger ki jagah nav links + Book Now */
+    .header-container {
+        padding: 0 40px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .nav-link {
+        padding-bottom: 2px;
+    }
+
+    .nav-cta {
+        align-self: center;
+    }
+
+    /* Hero */
+    .br-mobile {
+        display: none;
+    }
+
+    .hero-background {
+        height: 1500px;
+    }
+
+    .hero-container {
+        max-width: 712px;
+    }
+
+    .hero-heading h1 {
+        font-size: 56px;
+        line-height: 64px;
+    }
+
+    .hero-description {
+        max-width: 672px;
+    }
+
+    /* Destinations */
+    .destinations,
+    .about-us {
+        padding: 96px 40px;
+    }
+
+    .destinations-container {
+        max-width: 672px;
+    }
+
+    .destinations-container h2,
+    .about-heading h2 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .destination-grid {
+        max-width: 612px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-image {
+        height: 210px;
+    }
+
+    /* About */
+    .about-container {
+        max-width: 612px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+        line-height: 27px;
+    }
+
+    /* Footer: 3 columns (logo | links | copyright) */
+    .footer {
+        padding: 48px 40px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .footer-nav {
+        width: 180px;
+        gap: 12px 16px;
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        width: 220px;
+        max-width: none;
+    }
+
+    .footer-bottom p {
+        padding-right: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .hero-background {
+        height: 900px;
+    }
+
+    .destination-grid {
+        max-width: 1280px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .about-container {
+        max-width: 896px;
+    }
+
+    .footer-container,
+    .header-container {
+        max-width: 1280px;
+    }
+}
